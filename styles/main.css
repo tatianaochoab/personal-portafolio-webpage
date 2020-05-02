@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+body, html{
+    margin: auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.jumbotron {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron h1{
+    font-family: 'Henny Penny', cursive;
+    font-size: 35pt;
+    color: #ffe593;
+}
+
+#container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 20% 79%;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-gap: 1%;
+}
+
+#navbar{
+    border: solid 1px;
+    box-sizing: border-box;
+    background: #000;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    width: 79%;
+    height: 70px;
+    top: 0vh;
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#navbar #nav-items{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+
+.draw-border {
+    box-shadow: inset 0 0 0 2px #58cdd1;
+    color: #58afd1;
+    -webkit-transition: color 0.25s 0.0833333333s;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+  
+.draw-border::before,
+.draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+  
+.draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+  
+.draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+  
+.draw-border:hover {
+    color: #ffe593;
+}
+  
+.draw-border:hover::before,
+.draw-border:hover::after {
+    border-color: #eb196e;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+  
+.draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+}
+  
+.draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: 500 15pt 'Handlee', cursive;
+    margin: 0px 10px;
+    padding: 5px;
+    width: 150px;
+}
+  ​
+.btn:focus {
+    outline: 2px dotted #55d7dc;
+}
+
+#welcome-section{
+    box-sizing: border-box;
+    background: #030303;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    text-align: center;
+    
+}
+
+#welcome-section .name{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section .name h1{
+    font-family: 'Henny Penny', cursive;
+    font-size: 40pt;
+    color: #ffe593;
+}
+
+#welcome-section .photo{
+    padding: 30px 0px 50px 0px;
+}
+
+#welcome-section .photo img{
+    text-align: center;
+    max-width: 150px;
+    min-width: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px -0px rgba(70, 165, 149, 0.75);
+}
+
+#welcome-section #section-hola{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-bottom: 30px;
+    
+}
+
+#welcome-section #section-hola h1{
+    color:#ffe593;
+    font-size: 50pt;
+    font-weight: 200;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 50%;
+    font-family: 'Ruthie', cursive;
+}
+
+#welcome-section #contacto{
+    color: #e4e4b1;
+    font-family: 'Handlee', cursive;
+    padding: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+}
+
+#welcome-section .titulo{
+    margin-bottom: 30px;
+}
+
+#welcome-section .titulo h3{
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18pt;
+    border: solid 2px  #e4e4b1;
+    /* background-color:  #e4e4b1; */
+    color:#58afd1;
+}
+
+.social-icons {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+  
+.social-icons li {  
+    margin: 25px;
+    position: relative;
+    font-size: 20px;
+}
+  
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
+    transition: all 265ms ease-out;
+}
+  
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: '';
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #ff003c, #c648c8);
+    transition: all 265ms ease-out;
+}
+  
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+  
+.social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #ff003c;
+    background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
+
+#main{
+    box-sizing: border-box;
+    background: #fff;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#main #projects{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#main #projects .project-tile{
+    padding: 30px 0;
+}
+
+#main #projects .project-tile h2{
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 70%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #projects #corousel{
+    width: 80%;
+    box-shadow: black 10px 10px 30px;   
+}
+
+#main #formacion{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+#main #formacion .project-tile{
+    padding: 50px 0px;
+}
+
+#main #formacion .project-tile h2{
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 70%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #formacion .informacion{
+    padding: 20px;
+    width: 80%;
+    box-shadow: black 10px 10px 30px; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: space-around;
+}
+
+#main #formacion .informacion h3, p{
+    font-family: 'Handlee', cursive;
+    text-align: center;
+}
+
+#main #formacion .informacion .div-imagen{
+    text-align: center;
+}
+#main #formacion .informacion .div-imagen .div-imagen-logos{
+    width: 100%;
+    text-align: center;
+}
+
+#main #formacion .informacion .div-imagen .div-imagen-logos img{
+    width: 50%;
+}
+
+#main #servicios{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#main #servicios .project-tile{
+    padding: 50px 0px;
+}
+
+#main #servicios .project-tile h2{
+    font-size: 50pt;
+    font-weight: 100;
+    line-height: 30px;
+    border: solid 2px #58cdd1;
+    width: 70%;
+    font-family: 'Ruthie', cursive;
+}
+
+#main #servicios .informacion{
+    padding: 20px;
+    width: 80%;
+    box-shadow: black 10px 10px 30px; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: space-around;
+}
+
+#main #servicios .informacion .div-imagen{
+    text-align: center;
+}
+
+#main #servicios .informacion .div-imagen .fig-servicios{
+    width: 100%;
+    text-align: center;
+}
+
+#main #servicios .informacion .div-imagen .fig-servicios .img-servicios{
+    width: 600px;
+}
+
+
+
+
+
+
