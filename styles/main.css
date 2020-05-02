@@ -335,6 +335,16 @@ body, html{
 #main #formacion .informacion .div-imagen{
     text-align: center;
 }
+
+#main #formacion .informacion .div-imagen .fig-informacion{
+    text-align: center;
+    width: 100%;
+}
+
+#main #formacion .informacion .div-imagen .fig-informacion{
+    width: 600px;
+}
+
 #main #formacion .informacion .div-imagen .div-imagen-logos{
     width: 100%;
     text-align: center;
